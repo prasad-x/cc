@@ -72,11 +72,11 @@ async def set_timer(bot, message):
                     
                     Countdown_TeLe_TiPs=f"***{ss}***,\n{t}\n\n\n◇ **දින** [{d}]**යි**  **පැය** [{h}]**යි** **මිනිත්තු** [{m}]**යි**  **තත්පර** [{s}]**ක** **කාලයක්** **තිබෙයි**. 📚\n\n<i>'Live Countdown Timer'</i>\n\n\n{t}\n\n**[Powered By ScienceEDU⚡️]**"
                     finish_countdown = await get_user_input_time.edit(Countdown_TeLe_TiPs)
-                    await asyncio.sleep(4)
+                    await asyncio.sleep(10)
                     n+=1
                     if n>28:
                         n=n-28
-                    user_input_time -=4
+                    user_input_time -=10
                 await finish_countdown.edit("🚨 Beep! Beep!! **TIME'S UP!!!**")
             else:
                 pass
