@@ -72,17 +72,17 @@ async def set_timer(bot, message):
                     
                     Countdown_TeLe_TiPs=f"***{ss}***,\n{t}\n\n\n◇ **දින** [{d}]**යි**  **පැය** [{h}]**යි** **මිනිත්තු** [{m}]**යි**  **තත්පර** [{s}]**ක** **කාලයක්** **තිබෙයි**. 📚\n\n<i>'Live Countdown Timer'</i>\n\n\n{t}\n\n**[Powered By ScienceEDU⚡️]**"
                     finish_countdown = await get_user_input_time.edit(Countdown_TeLe_TiPs)
-                    await asyncio.sleep(10)
+                    await asyncio.sleep(9)
                     n+=1
                     if n>28:
                         n=n-28
-                    user_input_time -=10
+                    user_input_time -=9
                 await finish_countdown.edit("🚨 Beep! Beep!! **TIME'S UP!!!**")
             else:
                 pass
 
     except FloodWait as e:
-        await asyncio.sleep(e.x)
+        await asyncio.sleep(e.value)
 
 
 
@@ -100,5 +100,5 @@ async def stop_timer(bot, message):
         else:
             await message.reply('👮🏻‍♂️ Sorry, **only admins** can execute this command.')
     except FloodWait as e:
-        await asyncio.sleep(e.x) 
+        await asyncio.sleep(e.value) 
 bot.run()
